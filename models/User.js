@@ -10,7 +10,7 @@ const userSchema = new Schema(
       
     },
     email: {
-      type: string,
+      type: String,
       required: true,
       unique:true,
       match: [
@@ -20,14 +20,14 @@ const userSchema = new Schema(
     },
     thoughts:[ 
     {
-      type: Schema.Types.OpjectId,
+      type: Schema.Types.ObjectId,
       ref:"Thought",
     },
 ],
     friends:[
      {
-        type: Schema.Types.OpjectId,
-        ref: User,
+        type: Schema.Types.ObjectId,
+        ref: "User",
       },
     ],
 },
